@@ -41,10 +41,9 @@ Configuration WiniKubeHyperV {
             DestinationPath = $ConfigurationData.Paths.Tmp + '/InstallDocker.msi'
         }
         Package DockerForWindows {
-            Name = "Docker for Windows"
-            Path = $ConfigurationData.Paths.Tmp + '/InstallDocker.msi'
-            ProductId = ""
-            Arguments = '/quiet /passive /log ' + $ConfigurationData.Paths.Tmp + '/DockerForWindowsInstall.log'
+            Name = "Docker"
+            Path = $ConfigurationData.Paths.Tmp + '\InstallDocker.msi'
+            ProductId = "C482546D-67BB-41BD-8E28-A71A002BC146"
             DependsOn = "[xRemoteFile]InstallDocker"
         }
 

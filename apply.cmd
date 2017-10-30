@@ -2,6 +2,7 @@
 setlocal enabledelayedexpansion
 
 choice /c HVN /m "Please choose Hyper-V (H), Virtualbox (V), or no action (N)"
+if errorlevel 3 exit
 if errorlevel 2 set driver=Virtualbox
 if errorlevel 1 set driver=HyperV
 
